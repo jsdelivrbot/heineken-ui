@@ -1,0 +1,30 @@
+
+html, body {
+  height:100%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.intro {
+  height:100%;
+}
+
+#logo {
+  display: block;
+  margin: 0 auto;
+  padding: 10% 0;
+  width: 50%;
+  max-width: 200px;
+}
+.main, .main > div {
+  height: 100% !important;
+}
+.left{
+  display : flex;
+  background: url("./background.jpg") no-repeat;
+  background-size: cover;
+  height : 100%;
+}
+.right {
+  position: relative;
+}

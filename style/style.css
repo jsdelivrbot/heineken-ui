@@ -1,0 +1,188 @@
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700') ;
+@import url('end.css');
+@import url('base.css') ;
+
+.btn-default, .btn-default:hover, .btn-default:active, .btn-default:visited .btn-default:focus {
+  background: linear-gradient(96deg, #0f7231, #00a650) !important;
+  box-shadow: 0 10px 20px 0 rgba(28, 129, 63, 0.4);
+}
+
+/*start: form*/
+.login form {
+  margin: 0 auto;
+  max-width: 30em;
+  text-align: right;
+  width: 100%;
+}
+.inputs input {
+  display: block;
+  height: 3em !important;
+  margin: 0 0 20px;
+  -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+}
+
+.inputs input[type="text"], input[type="password"] {
+  margin-bottom: 20px;
+}
+.inputs input:focus, input:active  {
+  border-color: #1FCC08 ;
+}
+.forgot {
+  margin: 20px 0;
+  font-weight: 300;
+}
+
+.greeting{
+  text-align: center;
+}
+h1, h2, h3 ,h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+}
+.greeting h2 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.greeting h3 {
+  font-size: 0.875em;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.Sign {
+  width:100% ;
+  color:white !important;
+  background: linear-gradient(96deg, #0f7231, #00a650);
+	border: none;
+	box-shadow: 0 10px 20px 0 rgba(28, 129, 63, 0.4);
+}
+
+/* Signup */
+
+#success {
+  display: block;
+  margin: 0 auto;
+  padding: 15% 0 10%;
+  max-width: 100px;
+}
+
+.success{
+  text-align: center;
+}
+
+.success h2 {
+  color: #444444 !important;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 12px;
+}
+.success h3 {
+font-size: 1.2em;
+margin-bottom: 10px;
+color: #AAAAAA;
+font-family: 'Montserrat', sans-serif;
+}
+
+/* Forgot Password */
+.forgotpwd{
+  text-align: center;
+}
+
+  .forgotpwd h2 {
+  font-size: 1.3em;
+  margin-top: 6.25em;
+  margin-bottom: 0.75em;
+}
+.forgotpwd h3 {
+  font-size: 0.875em;
+  margin-bottom: 20px;
+  color: grey ;
+}
+
+/* Sign Up Form */
+
+ form {
+  margin: 0 auto;
+  max-width: 30em;
+  text-align: left;
+  width: 100%;
+}
+
+.GetAccount{
+  text-align: center;
+}
+
+.GetAccount h2 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  font-weight: normal;
+  color: #444444;
+}
+.GetAccount h3 {
+  font-size: 0.875em;
+  margin-bottom: 20px;
+  font-weight: light;
+  color: #AAAAAA;
+}
+
+.signup input {
+  display: block;
+  height: 3em !important;
+  margin: 0 0 20px;
+  -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+   text-align: center;
+}
+
+.signup input[type="text"], input[type="password"] {
+  margin-bottom: 20px;
+}
+.signup input:focus, input:active  {
+  border-color: #1FCC08 ;
+}
+
+
+#role {
+  font-weight: normal;
+}
+
+button{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  text-align: center;
+  border: 1px solid #00A650;
+  border-radius: 5px;
+  background-color: #FCFCFC;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+.but{
+  box-sizing: border-box;
+  width: 30% ;
+  margin-top: 10px ;
+  margin-bottom: 20px ;
+}
+#Manager{
+  margin-right: 0px ;
+}
+
+.Names{
+  display: flex ;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.userNames{
+  width:48% ;
+  height: 3em !important;
+  box-sizing: border-box;
+}

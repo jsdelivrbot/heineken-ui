@@ -1,0 +1,10 @@
+applications:
+-path: .
+  disk_quota: 1024M
+  host: heineken-factory-management
+  name: Heineken-Factory-Management
+  command: npm start
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M
+  
