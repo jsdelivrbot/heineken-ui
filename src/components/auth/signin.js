@@ -1,30 +1,29 @@
 import React,{ Component } from 'react' ;
 import { reduxForm, Field } from 'redux-form' ;
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch
-} from 'react-router-dom' ;
-import * as actions  from '../../actions' ;
+import * as actions  from '../../actions/auth' ;
+import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router';
 import { connect } from 'react-redux';
 
 
+
 const renderInput = field => {
-    const { input, type } = field;
+    const { input, type , placeholder } = field;
     return (
         <div>
-            <input {...input} type={type} className="form-control" />
+            <input {...input} type={type} placeholder={placeholder} className="form-control" />
         </div>
     );
 }
 
 
 class Signin extends Component{
-  handleFormSubmit({ email, password }){
-    console.log(email,password) ;
-    //Need to log user in
-    this.props.signinUser({ email, password }) ;
+  constructor(props) {
+   super(props);
+   this.handleFormSubmit = this.handleFormSubmit.bind(this);
+ }
+
+  handleFormSubmit(props){
+    this.props.signinUser(props);
   }
 
   renderAlert() {
@@ -40,7 +39,7 @@ class Signin extends Component{
 
   render()
   {
-  const { handleSubmit, fields: {email, password }} = this.props ;
+  const { handleSubmit } = this.props ;
   return (
     <section className="intro">
      <div className="col-md-6 left  hidden-xs hidden-sm">
@@ -52,7 +51,7 @@ class Signin extends Component{
          <h3>Sign In.</h3>
        </div>
        <div className="login">
-         <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+         <form onSubmit={handleSubmit(this.handleFormSubmit)}>
                     <div className="inputs">
                       <Field name="email"
                              type="email"
@@ -65,7 +64,11 @@ class Signin extends Component{
                           placeholder="password"
                           className="form-control"
                         />
-                      {this.renderAlert()}
+                        <div className="forgot"><Link to="/reset-password">Forgot Password?</Link>
+                        </div>
+                        {/* Server error message */}
+                      { this.props.errorMessage && this.props.errorMessage.signin &&
+                          <div className="error-container signin-error">Oops! { this.props.errorMessage.signin }</div> }
                         <input type="submit" name="login" value="Sign in" className="btn btn-default Sign" />
                 </div>
               </form>
@@ -77,6 +80,9 @@ class Signin extends Component{
 }
 }
 
+
+
+
 function mapStateToProps(state) {
     return {
         errorMessage: state.auth.error
@@ -86,7 +92,6 @@ function mapStateToProps(state) {
 
 Signin = connect(mapStateToProps, actions)(Signin);
 Signin = reduxForm({
- form: 'signin',
-  fields: [ 'email', 'password' ]
+ form: 'signin'
 })(Signin);
 export default connect(mapStateToProps, actions)(Signin);
